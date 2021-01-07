@@ -1,0 +1,18 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-6">
+        <img src="{{ product.imageURL }}" class="view-image">
+    </div>
+    <div class="col-lg-6">
+        <h1>{{ product.name }}</h1>
+        <br>
+        <h4><strong>Description:</strong></h4>
+        <p>
+            This fancy-schmancy watch is genuine rose fake gold and way overpriced. It came from china. It also doesn't work.
+        </p>
+    </div>
+</div>
+{% endblock content %}
