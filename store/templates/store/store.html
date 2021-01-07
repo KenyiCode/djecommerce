@@ -14,7 +14,7 @@
                     data-product="{{ product.id }}" data-action="add">
                     Add To Cart
                 </button>
-                <a class="btn btn-outline-success" href="#">View</a>
+                <a class="btn btn-outline-success" href="{% url 'viewItem' product.id %}">View</a>
                 <h4 style="display: inline-block;float: right;">
                     ${{ product.price|floatformat:2 }}
                 </h4>
