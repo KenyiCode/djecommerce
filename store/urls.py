@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 from . import views
 
 urlpatterns = [
@@ -7,5 +7,5 @@ urlpatterns = [
     path('checkout/', views.checkout, name="checkout"),
     path('update_item/', views.updateItem, name="update_item"),
     path('process_order/', views.processOrder, name="process_order"),
-    path('viewItem/(?P<product_id>)', views.viewItem, name="viewItem"),
+    re_path(r'viewItem/(?P<product_id>\d+)/$', views.viewItem, name="viewItem"),
 ]
